@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
 import { ExampleComponent } from '../components/react/example';
+import { InteractiveComponent } from '../components/react/interactive'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -34,7 +36,11 @@ import { ExampleComponent } from '../components/react/example';
 			/>
 		</ul>
 
+		<!-- SSR/SSG -->
 		<ExampleComponent />
+
+		<!-- client:load fala pro Astro que esse é um componente client-side (deve ser rehidratado) -->
+		<InteractiveComponent client:load />
 	</main>
 </Layout>
 
