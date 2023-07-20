@@ -8,8 +8,8 @@ interface Props {
 const { href, title, body } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
+<li class="link-card h-full">
+	<a href={href} class='h-full flex flex-col justify-center'>
 		<h2>
 			{title}
 			<span>&rarr;</span>

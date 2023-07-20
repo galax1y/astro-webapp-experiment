@@ -1,4 +1,7 @@
---- 
+---
+import Header from '../components/Header.astro';
+import { headerNavigation } from '../config/navigation/header'
+
 interface Props {
 	title: string;
 }
@@ -17,6 +20,7 @@ const { title } = Astro.props;
 		<title class="text-red-500">{title}</title>
 	</head>
 	<body>
+		<Header title='galax1y.dev' links={headerNavigation} />
 		<slot />
 	</body>
 </html>

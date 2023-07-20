@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title='Who am I'>
+  <main class='flex flex-col items-center justify-center'>
+    <section class='flex flex-col items-center justify-center h-96'>
+      <h1 class='text-5xl font-bold'>I&apos;m Lucas</h1>
+      <strong class='mt-2 animate-pulse text-4xl underline underline-offset-2 text-emerald-600'>Full Stack Web Developer</strong>
+      <div class='flex gap-4 mt-8'>
+        <div class='h-32 basis-1/2'>
+          <Card
+            title='Hire me!'
+            body='I develop high quality, easily maintainable websites with the latest technologies in the JavaScript environment =)'
+            href='https://www.linkedin.com/in/lucas-wermann/'
+          />
+        </div>
+        <div class='h-32 basis-1/2'>
+          <Card
+            title='Leave me a message'
+            body='Click here and write something for me'
+            href='/maintenance'
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

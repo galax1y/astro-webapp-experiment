@@ -1,0 +1,31 @@
+---
+import { NavItem } from '../config/navigation/types'
+
+interface Props {
+  title: string
+  links: NavItem[]
+}
+
+const {title, links} = Astro.props
+---
+
+<header class='bg-zinc-200 shadow flex items-center justify-around w-full h-24 '>
+  <a href='/' class='font-bold text-3xl text-indigo-600 hover:scale-110 transition-transform duration-75'>{title}</a>
+
+  <nav class='flex-1 max-w-xl flex items-center justify-around'>
+    {links.map(link => {
+      return (
+        <li class='list-none'>
+          <a
+            href={link.enabled && link.href}
+            class:list={[
+              'underline font-semibold text-lg text-zinc-900 hover:text-indigo-600',
+              link.enabled ? 'cursor-pointer' : 'select-none opacity-50 hover:text-red-600 cursor-not-allowed',
+            ]}>
+            {link.title}
+          </a>
+        </li>
+      )
+    })}
+  </nav>
+</header>
